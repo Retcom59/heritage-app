@@ -51,3 +51,13 @@ Follow these steps to run the project locally.
 ```bash
 git clone [https://github.com/Retcom59/heritage-app.git](https://github.com/Retcom59/heritage-app.git)
 cd heritage-app
+## ⚖️ License & Citation
+
+This project is licensed under the **MIT License**. See the [LICENSE](LICENSE) file for details.
+
+If you use this project in your research or work, please cite it as follows:
+
+> **Kerem (2025). Web GIS Based Cultural Heritage Information System.** > GitHub Repository: https://github.com/Retcom59/heritage-app
+
+### Kaynak Gösterme Kuralı (TR)
+Bu proje açık kaynaklıdır ancak ticari veya akademik kullanımlarda **kaynak belirtilmesi ve orijinal repo linkinin verilmesi** zorunludur.
