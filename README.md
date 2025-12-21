@@ -47,10 +47,6 @@ Follow these steps to run the project locally.
 - Node.js & npm
 - Git
 
-### 1. Clone the Repository
-```bash
-git clone [https://github.com/Retcom59/heritage-app.git](https://github.com/Retcom59/heritage-app.git)
-cd heritage-app
 ## ⚖️ License & Citation
 
 This project is licensed under the **MIT License**. See the [LICENSE](LICENSE) file for details.
@@ -61,3 +57,9 @@ If you use this project in your research or work, please cite it as follows:
 
 ### Kaynak Gösterme Kuralı (TR)
 Bu proje açık kaynaklıdır ancak ticari veya akademik kullanımlarda **kaynak belirtilmesi ve orijinal repo linkinin verilmesi** zorunludur.
+
+### 1. Clone the Repository
+```bash
+git clone [https://github.com/Retcom59/heritage-app.git](https://github.com/Retcom59/heritage-app.git)
+cd heritage-app
+
