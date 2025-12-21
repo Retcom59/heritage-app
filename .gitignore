@@ -1,0 +1,52 @@
+# --- GENEL & SİSTEM ---
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# --- PYTHON / BACKEND ---
+# Byte-compiled / Optimize edilmiş dosyalar
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Sanal Ortamlar (Görselde .venv var)
+.venv/
+venv/
+env/
+backend/.venv/
+
+# Environment Variables (ÇOK ÖNEMLİ - Şifrelerin github'a gitmesin)
+.env
+.env.*
+backend/.env
+
+# Veritabanı (SQLite kullanıyorsan)
+*.sqlite3
+*.db
+backend/data/*.db
+
+# Büyük Veri Dosyaları (Görseldeki csv eğer çok büyükse veya hassassa ekle)
+# Eğer bu csv örnek veriyse kalabilir, gerçek veriyse yorumu kaldır:
+# backend/data/data.csv
+
+# --- NODE / FRONTEND ---
+# Bağımlılıklar (Asla atılmamalı)
+node_modules/
+frontend/node_modules/
+
+# Build çıktıları
+dist/
+build/
+frontend/dist/
+
+# Loglar
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Yerel ortam ayarları
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local

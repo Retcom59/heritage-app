@@ -1,0 +1,195 @@
+:root {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica,
+    Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+}
+
+/* MOBİL KAYMA SORUNU ÇÖZÜMÜ */
+body,
+html,
+#root {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden; /* Dışarı taşmayı engeller */
+  position: fixed; /* Mobilde "lastik" etkisini önler */
+}
+
+/* Kaydırma çubuklarını güzelleştir */
+*::-webkit-scrollbar {
+  width: 6px;
+}
+*::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+*::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 3px;
+}
+* {
+  box-sizing: border-box; /* Padding taşmalarını engeller */
+  -webkit-tap-highlight-color: transparent; /* Mobilde tıklama efektini kaldırır */
+}
+
+/* --- 1. MODERN HARİTA MARKERLARI --- */
+/* --- MODERN HARİTA MARKERLARI --- */
+.custom-marker {
+  background: transparent;
+  border: none;
+}
+
+.marker-pin {
+  width: 40px; /* Biraz büyüttük */
+  height: 40px;
+  border-radius: 50% 50% 50% 0; /* Damla şekli verelim */
+  background: white;
+  border: 2px solid #3b82f6;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  /* İkonu dik tutmak için damlayı döndürüyoruz */
+  transform: rotate(-45deg);
+  transition: all 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275); /* Zıplama efekti */
+}
+
+/* İçindeki SVG'yi düzeltmek için ters döndür */
+.marker-pin > svg {
+  transform: rotate(45deg);
+}
+
+/* Hover Efekti */
+.marker-pin:hover {
+  transform: scale(1.15) rotate(-45deg);
+  z-index: 1000 !important;
+  cursor: pointer;
+}
+
+/* --- KATEGORİ RENKLERİ --- */
+.marker-religious {
+  border-color: #ef4444; /* Kırmızı */
+  color: #ef4444;
+}
+.marker-museum {
+  border-color: #8b5cf6; /* Mor */
+  color: #8b5cf6;
+}
+.marker-military {
+  border-color: #10b981; /* Yeşil */
+  color: #10b981;
+}
+.marker-civil {
+  border-color: #f59e0b; /* Turuncu */
+  color: #f59e0b;
+}
+/* ... Önceki kodlar kalsın ... */
+
+/* --- CANLI KONUM MARKER (BLUE DOT) --- */
+/* --- CANLI KONUM MARKER (BLUE DOT & HEADING) --- */
+/* --- CANLI KONUM MARKER (BLUE DOT & HEADING) --- */
+.user-location-marker {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* Dönme işlemi React tarafında yapılıyor */
+  transition: transform 0.1s linear;
+  pointer-events: none; /* Harita tıklamasını engellemesin */
+}
+
+/* Ortadaki Mavi Nokta (Sabit) */
+.user-dot {
+  width: 14px;
+  height: 14px;
+  background-color: #2563eb;
+  border: 2px solid white;
+  border-radius: 50%;
+  box-shadow: 0 0 10px rgba(37, 99, 235, 0.5);
+  z-index: 10;
+  position: relative;
+}
+
+/* Yön Gösteren Koni (Fener Işığı) */
+.user-heading-cone {
+  width: 0;
+  height: 0;
+  border-left: 20px solid transparent;
+  border-right: 20px solid transparent;
+  border-top: 60px solid rgba(37, 99, 235, 0.3); /* Mavi flu ışık */
+  position: absolute;
+  bottom: 0px; /* Noktanın merkezinden çıksın */
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 40%;
+  filter: blur(4px);
+  z-index: 5;
+  transform-origin: bottom center;
+}
+
+/* Nabız Efekti */
+.user-pulse {
+  width: 40px;
+  height: 40px;
+  background-color: rgba(37, 99, 235, 0.2);
+  border-radius: 50%;
+  position: absolute;
+  z-index: 1;
+  animation: pulse-animation 2s infinite;
+}
+
+/* Sabit Dalga (Pulse) - Sadece konum bulununca yanıp sönsün */
+.user-pulse {
+  width: 40px;
+  height: 40px;
+  background-color: rgba(37, 99, 235, 0.2);
+  border-radius: 50%;
+  position: absolute;
+  z-index: 1;
+  animation: pulse-animation 2s infinite;
+}
+
+@keyframes pulse-animation {
+  0% {
+    transform: scale(0.5);
+    opacity: 0.8;
+  }
+  100% {
+    transform: scale(1.5);
+    opacity: 0;
+  }
+}
+
+/* ... Önceki kodlar ... */
+
+/* --- MODERN SCROLLBAR (Tüm listeler için) --- */
+.custom-scroll::-webkit-scrollbar {
+  width: 4px; /* Çok ince */
+}
+.custom-scroll::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.05);
+}
+.custom-scroll::-webkit-scrollbar-thumb {
+  background: rgba(148, 163, 184, 0.5); /* Slate-400 */
+  border-radius: 10px;
+}
+.custom-scroll::-webkit-scrollbar-thumb:hover {
+  background: rgba(100, 116, 139, 0.8);
+}
+
+/* Animasyonlar */
+.fade-in {
+  animation: fadeIn 0.3s ease-in-out;
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

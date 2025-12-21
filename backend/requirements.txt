@@ -1,0 +1,17 @@
+fastapi
+uvicorn[standard]
+sqlalchemy
+psycopg[binary]
+geoalchemy2
+pydantic-settings
+python-jose[cryptography]
+passlib[bcrypt]
+pydantic[email]
+alembic
+argon2-cffi
+geoalchemy2
+pandas
+datetime
+
+
+
