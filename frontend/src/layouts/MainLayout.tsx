@@ -52,7 +52,7 @@ export default function MainLayout() {
                 borderRadius: "4px",
               }}
             >
-              Giriş Yap (Demo)
+              Giriş Yap
             </button>
           )}
         </div>

@@ -3,7 +3,9 @@ import type { CulturalSite } from "../types/site";
 
 // ... (siteService kodları AYNI KALSIN) ...
 
-const API_URL = "http://localhost:8000/api/sites";
+const BASE_URL = import.meta.env.VITE_API_URL || "http://localhost:8000";
+
+const API_URL = `${BASE_URL}/api/sites`;
 
 interface SiteParams {
   search?: string;
