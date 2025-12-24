@@ -291,22 +291,6 @@ export default function SiteDetail({
             {routeStats ? "Rotayı Yenile" : "Rota Oluştur"}
           </button>
         </div>
-
-        <div
-          style={{
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "center",
-            gap: "6px",
-            marginTop: "4px",
-            opacity: 0.5,
-          }}
-        >
-          <Calendar size={12} />
-          <span style={{ fontSize: "11px" }}>
-            Son güncelleme: {site.last_update || "Bilinmiyor"}
-          </span>
-        </div>
       </div>
     </div>
   );
